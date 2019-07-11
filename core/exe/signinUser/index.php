@@ -13,7 +13,7 @@ class SignInUser
         global $conn;
         
 
-        include_once($_SERVER["DOCUMENT_ROOT"] . '/loader.php');
+        include_once($_SERVER["DOCUMENT_ROOT"] . '/stats/loader.php');
         
         if(isset($_REQUEST['email']) AND isset($_REQUEST['password'])){
             
@@ -25,8 +25,7 @@ class SignInUser
             
             
             if(empty($this->email) OR empty($this->password)){
-                echo "email is".$this->email;
-                //die('Please fill all fields');
+                die('Please fill all fields');
             }
             
             
@@ -40,7 +39,7 @@ class SignInUser
             // validate information to avoid duplicates
             $account_arguments = array('email' => $this->email, 'password' => $encpassword);
         
-            if(returnExists('agents', $account_arguments) == 0){
+            if(returnExists('users', $account_arguments) == 0){
                 die('Invalid email and password');
             }
 

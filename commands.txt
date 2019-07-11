@@ -1,3 +1,5 @@
-php -S localhost:8044 adminer.php
-php -S localhost:3000
-pagekite.py 3000 amaina.pagekite.me
+php -S localhost:8044 adminer.php #launch db on browser using adminer need to download adminer
+php -S localhost:3000 #launch any php on browser
+pagekite.py 3000 amaina.pagekite.me #launch pagekite need to download pagekite
+sudo lsof -i -P -n | grep LISTEN #see active ports
+sudo mysql -u maina -p #login to a mysql db
