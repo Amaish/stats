@@ -1,5 +1,13 @@
-php -S localhost:8044 adminer.php #launch db on browser using adminer need to download adminer
-php -S localhost:3000 #launch any php on browser
-pagekite.py 3000 amaina.pagekite.me #launch pagekite need to download pagekite
-sudo lsof -i -P -n | grep LISTEN #see active ports
-sudo mysql -u maina -p #login to a mysql db
+php -S localhost:8044 adminer.php # launch db on browser using adminer need to download adminer
+php -S localhost:3000 # launch any php on browser
+pagekite.py 3000 amaina.pagekite.me # launch pagekite need to download pagekite
+sudo lsof -i -P -n | grep LISTEN # see active ports
+sudo mysql -u maina -p # login to a mysql db
+cd /var/log/freeswitch/ # location of FS logs
+fs_cli -x "sofia status profile internal reg" -p @spaRAg00s3 | grep "username" see the sip agents connected on freeswitch #
+tar -C /usr/local -xzf "go1.12.7.linux-amd64.tar.gz" installing a .tar.gz file
+export PATH=$PATH:/usr/local/go/bin # add this path to /etc/profile
+go env # helps you see the current go environment
+mkdir -p $HOME/code/snippetbox # creates a folder snippetbox with the location /home/anthony/code/snippetbox
+go mod init amaina.me/snippetbox # This creates a new go.module named amaina.me/snippetbox
+curl -i -X GET https://amaina.pagekite.me/snippet/create # Simple curl
