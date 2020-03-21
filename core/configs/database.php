@@ -1,10 +1,10 @@
 <?php
 
 $server     = "127.0.0.1";
-$username   = "maina";
-$password   = "Ruth!99!";
+$username   = "username";
+$password   = "password";
 
-$database   = "voice_stat";
+$database   = "name";
 
 $conn = mysqli_connect($server, $username, $password, $database);
 
